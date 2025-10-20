@@ -1,19 +1,19 @@
-/* ---------- General Layout ---------- */
+/* ---------- General ---------- */
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #fdfdfd;
+  background-color: #fafafa;
   color: #333;
 }
 
-/* ---------- Header & Navigation ---------- */
+/* ---------- Header ---------- */
 header {
-  background-color: #f4f4f4;
-  padding: 1.5rem 0;
   text-align: center;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #ddd;
+  background-color: #f4f4f4;
 }
 
 h1 {
@@ -50,20 +50,42 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Main Content ---------- */
-main {
-  max-width: 800px;
-  margin: 2rem auto;
+/* ---------- Profile Section ---------- */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
   padding: 0 1rem;
-  text-align: justify;
 }
 
-/* ---------- Footer (optional) ---------- */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  padding: 1.5rem 0;
-  border-top: 1px solid #eee;
-  margin-top: 3rem;
+.profile-photo {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-text {
+  flex: 1;
+  text-align: justify;
+  font-size: 1.05rem;
+}
+
+/* ---------- Mobile Layout ---------- */
+@media (max-width: 700px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 60%;
+  }
+
+  .profile-text {
+    text-align: left;
+  }
 }
