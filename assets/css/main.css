@@ -3907,7 +3907,6 @@ input, select, textarea {
 			}
 
 		}
-/* === Custom: Intro photo + text layout === */
 .intro-content {
   display: flex;
   align-items: center;         /* vertically center text next to photo */
@@ -3919,32 +3918,36 @@ input, select, textarea {
 }
 
 .intro-photo img {
-  width: 250px;
+  width: 320px;                /* larger photo */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0; /* prevents image from shrinking */
+  flex-shrink: 0;
+  margin-left: 0;              /* remove left margin */
 }
 
 .intro-text {
   max-width: 600px;
-  flex: 1; /* let text use remaining space */
+  flex: 1;
   text-align: left;
 }
 
 /* ---------- Responsive (mobile) ---------- */
 @media (max-width: 768px) {
   .intro-content {
-    flex-direction: column; /* stack vertically on mobile */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .intro-photo img {
-    width: 60%;
-    margin-bottom: 1rem;
+    width: 70%;                /* scale nicely for phones */
+    margin: 0 auto;
   }
 
   .intro-text {
     text-align: left;
+    padding: 0 1rem;
   }
-}
+}/* === Custom: Intro photo + text layout === */
