@@ -3910,10 +3910,12 @@ input, select, textarea {
 /* === Custom: Intro photo + text layout === */
 .intro-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: nowrap; /* keep photo + text side-by-side on larger screens */
+  align-items: center;         /* vertically center text next to photo */
+  justify-content: flex-start; /* align to the left instead of center */
+  gap: 2rem;                   /* smaller space between photo and text */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;        /* reduced side padding */
 }
 
 .intro-photo img {
