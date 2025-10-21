@@ -3907,3 +3907,34 @@ input, select, textarea {
 			}
 
 		}
+
+/* === Custom: Intro photo + text layout === */
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap; /* ensures nice layout on small screens */
+}
+
+.intro-photo img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text {
+  max-width: 600px;
+}
+
+/* Optional: smaller screens */
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-photo img {
+    width: 60%;
+  }
+}
