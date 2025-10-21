@@ -3930,6 +3930,7 @@ input, select, textarea {
   max-width: 600px;
   flex: 1;
   text-align: left;
+  color: #E0DCFC
 }
 
 /* ---------- Responsive (mobile) ---------- */
