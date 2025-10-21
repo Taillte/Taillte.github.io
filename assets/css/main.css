@@ -3907,14 +3907,13 @@ input, select, textarea {
 			}
 
 		}
-
 /* === Custom: Intro photo + text layout === */
 .intro-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  flex-wrap: wrap; /* ensures nice layout on small screens */
+  flex-wrap: nowrap; /* keep photo + text side-by-side on larger screens */
 }
 
 .intro-photo img {
@@ -3922,19 +3921,28 @@ input, select, textarea {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* prevents image from shrinking */
 }
 
 .intro-text {
   max-width: 600px;
+  flex: 1; /* let text use remaining space */
+  text-align: left;
 }
 
-/* Optional: smaller screens */
+/* ---------- Responsive (mobile) ---------- */
 @media (max-width: 768px) {
   .intro-content {
-    flex-direction: column;
+    flex-direction: column; /* stack vertically on mobile */
     text-align: center;
   }
+
   .intro-photo img {
     width: 60%;
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    text-align: left;
   }
 }
